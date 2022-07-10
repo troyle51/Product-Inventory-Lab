@@ -6,12 +6,13 @@ public class Whiskey {
 
     }
     //Constructor //vvvv
-    public Whiskey(int id, String name, String brand, int size, float price) {
+    public Whiskey(int id, String name, String brand, int qty, float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;
-        this.size = size;
-        this. price = price;
+        //this.size = size;
+        this.qty = qty;
+        this.price = price;
     }
 
     // Getters and Setters //vvvv
@@ -54,6 +55,13 @@ public class Whiskey {
     public void setPrice(float price) {
         this.price = price;
     }
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
 
     //properties //vvvv
     private int id;
@@ -61,4 +69,5 @@ public class Whiskey {
     private String brand;
     private int size;
     private float price;
+    private int qty;
 }

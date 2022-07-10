@@ -24,7 +24,7 @@ public class SneakerTest {
         Assertions.assertEquals(expectedName, testSneaker.getName());
         Assertions.assertEquals(expectedBrand, testSneaker.getBrand());
         Assertions.assertEquals(expectedSport, testSneaker.getSport());
-        Assertions.assertEquals(expectedQty, testSneaker.getSize());
+        Assertions.assertEquals(expectedQty, testSneaker.getQty());
         Assertions.assertEquals(expectedPrice, testSneaker.getPrice());
     }
 
@@ -78,6 +78,18 @@ public class SneakerTest {
 
         // then
         Assertions.assertEquals(expected, testSneaker.getSize());
+    }
+    @Test
+    public void setQtyTest() {
+        // given
+        int expected = 1;
+
+        // when
+        Sneaker testSneaker = new Sneaker();
+        testSneaker.setQty(expected);
+
+        // then
+        Assertions.assertEquals(expected, testSneaker.getQty());
     }
 
     @Test

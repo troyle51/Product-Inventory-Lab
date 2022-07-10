@@ -17,7 +17,7 @@ public class WhiskeyTest {
         Assertions.assertEquals(expectedId, testWhiskey.getId());
         Assertions.assertEquals(expectedName, testWhiskey.getName());
         Assertions.assertEquals(expectedBrand, testWhiskey.getBrand());
-        Assertions.assertEquals(expectedQty, testWhiskey.getSize());
+        Assertions.assertEquals(expectedQty, testWhiskey.getQty());
         Assertions.assertEquals(expectedPrice, testWhiskey.getPrice());
     }
     @Test
@@ -58,6 +58,18 @@ public class WhiskeyTest {
         testWhiskey.setSize(expected);
 
         Assertions.assertEquals(expected, testWhiskey.getSize());
+    }
+    @Test
+    public void setQtyTest() {
+        // given
+        int expected = 1;
+
+        // when
+        Whiskey testWhiskey = new Whiskey();
+        testWhiskey.setQty(expected);
+
+        // then
+        Assertions.assertEquals(expected, testWhiskey.getQty());
     }
     @Test
     public void setPriceTest() {
