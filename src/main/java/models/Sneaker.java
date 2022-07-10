@@ -1,6 +1,34 @@
 package models;
 
+
+//class /vvvv
 public class Sneaker {
+
+//properties //vvvv
+    private int id;
+    private String name;
+    private String brand;
+    private String sport;
+    private int size;
+    private float price;
+
+
+
+    //Constructor //vvvv
+    public Sneaker(){
+    }
+    //Constructor //vvvv
+    public Sneaker(int id, String name, String brand, String sport, int size, float price) {
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.sport = sport;
+        this.size = size;
+        this.price = price;
+    }
+
+
+//Getters and Setters //vvvv
     public int getId() {
         return id;
     }
@@ -8,13 +36,6 @@ public class Sneaker {
     public void setId(int id) {
         this.id = id;
     }
-
-    private int id;
-    private String name;
-    private String brand;
-    private String sport;
-    private int size;
-    private float price;
 
     public String getName() {
         return name;
@@ -51,4 +72,5 @@ public class Sneaker {
     public void setPrice(float price) {
         this.price = price;
     }
+
 }
